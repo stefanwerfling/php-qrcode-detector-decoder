@@ -1,4 +1,8 @@
 # QR code decoder / reader for PHP
+
+[![Tests](https://github.com/khanamiryan/php-qrcode-detector-decoder/actions/workflows/tests.yml/badge.svg)](https://github.com/khanamiryan/php-qrcode-detector-decoder/actions/workflows/tests.yml)
+[![Static Tests](https://github.com/khanamiryan/php-qrcode-detector-decoder/actions/workflows/static_tests.yml/badge.svg)](https://github.com/khanamiryan/php-qrcode-detector-decoder/actions/workflows/static_tests.yml)
+
 This is a PHP library to detect and decode QR-codes.<br />This is first and only QR code reader that works without extensions.<br />
 Ported from [ZXing library](https://github.com/zxing/zxing)
 
@@ -16,12 +20,13 @@ $ composer require khanamiryan/qrcode-detector-decoder
 ## Usage 
 ```php
 require __DIR__ . "/vendor/autoload.php";
+use Zxing\QrReader;
 $qrcode = new QrReader('path/to_image');
 $text = $qrcode->text(); //return decoded text from QR Code
 ```
 
 ## Requirements 
-* PHP >= 5.6
+* PHP >= 8.1
 * GD Library
 
 
